@@ -279,7 +279,8 @@ def main():
     with st.sidebar:
         st.markdown(f"### 🐂 {ESTANCIA}")
         st.caption(EMPRESA)
-        st.info(f"Usuario: {st.session_state['nombre_usuario']} | Perfil: {'Carga y Edición' if es_editor else 'Solo Lectura'}")
+        st.info(f"👤 **{st.session_state['nombre_usuario']}**\n\nPerfil: **{'Carga y Edición' if es_editor else 'Solo Lectura'}**")
+
         fecha_dt = st.date_input("📅 Fecha de Consulta / Carga", value=datetime.date.today())
         f_sel = fecha_dt.strftime("%Y-%m-%d")
         mes_prefix = f_sel[:7]
